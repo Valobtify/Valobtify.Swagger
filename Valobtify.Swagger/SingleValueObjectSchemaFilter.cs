@@ -9,16 +9,15 @@ public class SingleValueObjectSchemaFilter : ISchemaFilter
 
     public void Apply(OpenApiSchema schema, SchemaFilterContext context)
     {
-        if (context.Type.IsSingleValueObject())
-        {
-            var valueType = context.Type.GetProperty(nameof(Template.Value))!.PropertyType;
+        if (!context.Type.IsSingleValueObject()) return;
 
-            var jsonSchemaType = context.SchemaGenerator.GenerateSchema(valueType, context.SchemaRepository);
+        var valueType = context.Type.GetProperty(nameof(Template.Value))!.PropertyType;
 
-            schema.Type = jsonSchemaType.Type;
-            schema.Format = jsonSchemaType.Format;
+        var jsonSchemaType = context.SchemaGenerator.GenerateSchema(valueType, context.SchemaRepository);
 
-            schema.Properties.Clear();
-        }
+        schema.Type = jsonSchemaType.Type;
+        schema.Format = jsonSchemaType.Format;
+
+        schema.Properties.Clear();
     }
 }
