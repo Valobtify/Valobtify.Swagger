@@ -5,6 +5,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{41AA1DC8-191B-43AB-9766-9A5052F57218}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		.github\workflows\main.yml = .github\workflows\main.yml
+		LICENCE = LICENCE
 	EndProjectSection
 EndProject
 Global
