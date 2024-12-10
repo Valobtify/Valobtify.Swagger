@@ -4,7 +4,29 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>1.0.0</Version>
+        <Description>Provides seamless integration between Valobtify value objects and Swagger documentation in ASP.NET Core.</Description>
+        <PackageIcon>ValobtifyIcon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/Valobtify/Valobtify.Swagger</RepositoryUrl>
+        <PackageLicenseFile>LICENCE</PackageLicenseFile>
+        <PackageTags>Valobtify;value object;value;swagger;asp;api;</PackageTags>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="..\LICENCE">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\ValobtifyIcon.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.1.0" />
